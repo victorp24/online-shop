@@ -1,0 +1,189 @@
+/* Set the max width of the page to 1000 width, and set margin:auto so that it is centered*/
+body {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Logo dimensions */
+#logo {
+    width: 225px;
+    height: 225px;
+    margin: 10px;
+}
+
+/* Banner dimensions */
+#banner {
+    width: 700px;
+    height: 225px;
+    margin: 10px;
+}
+
+/* Vertical margins for header*/
+#header {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* Without this, the two unordered lists side-by-side would have different heights,
+   causing the left menu bar to be a shorter height than the product list, making them
+   uneven. If they are uneven, this presents an issue with the footer. The footer starts
+   below the menu bar, but what we want is the footer to start below the product list.
+   To fix this, I set the div with id content to have display:table-cell, treating
+   all the elements in it like a <td> element or a table data cell. */
+#content {
+    display:table-cell;
+}
+
+/* We do this so that the two unordered lists in the content div is next to each other horizontally, and not vertically */
+ul {
+    display: inline-block;
+}
+
+/* Menu bar styling for list items */
+.menuItem {
+    padding: 5px;
+    text-align: center;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium';
+    font-weight: bold;
+    list-style-type: none;
+}
+
+/* On hover for list items */
+ul li.menuItem:hover {
+    background-color: gold;
+    color: #A28BE7;
+}
+
+/* Divide the unordered product list to 3 columns, float to the right to improve appearance */
+#productList {
+    float: right;
+    columns: 3;
+}
+
+/* Styling for product items */
+li.product {
+    border: 2px solid purple;
+    padding-top: 2px;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    list-style-type: none;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium';
+    font-weight: bold;
+    font-size: large;
+    width: 210px;
+    height: 290px;
+}
+
+
+/* On hover for products */
+ul li.product:hover {
+    background-color: gold;
+    color: #A28BE7;
+}
+
+/* On hover on a product, reveal the price */
+ul li.product:hover .price {
+    visibility: visible;
+}
+
+/* Product image dimensions */
+img.productImage {
+    height: 175px;
+    width: 175px;
+}
+
+/* Hide price, until someone hovers on the product */
+.price {
+    visibility: hidden;
+    color: #A28BE7;
+}
+
+/* Footer styling */
+#footer {
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium';
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    color: gold;
+    background-color: #A28BE7;
+}
+
+/* 'Add to Cart' and 'Remove from Cart' buttons styline */
+.btn-add-remove {
+    visibility: hidden;
+    font-family: 'Franklin Gothic Medium';
+    background-color: #A28BE7;
+}
+
+/* Hide buttons, until someone hovers on the product */
+ul li.product:hover .btn-add-remove {
+    visibility: visible;
+}
+
+/* 'Show Cart' button styling */
+#btn-show-cart {
+    text-align: center;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium';
+    font-weight: bold;
+}
+
+/* 'Hide Cart' button styling */
+#btn-hide-cart {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium';
+    font-weight: bold;
+}
+
+/* Give margins to right side of menu to improve appearance */
+#menu {
+    margin-right: 33.5px;
+}
+
+/* Styling for the cart 'table' */
+table {
+    background-color: lightyellow;
+    font-family: 'Franklin Gothic Medium';
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    font-size: large;
+}
+
+td, th {
+    border: 3px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+  
+.qtyBtn {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#total {
+    text-align: right;
+}
+
+/* Styling for the cart modal */
+#modal {
+    padding: 20px;
+    position: fixed;
+    float: left;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+    text-align: center;
+}
